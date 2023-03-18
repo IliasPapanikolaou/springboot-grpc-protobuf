@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package com.ipap.grpc;
+
+option java_multiple_files = true;
+option java_package = "com.ipap.grpc";
+
+service GreetingService {
+  // Remote Procedure Call
+  rpc greeting(GreetingRequest) returns (GreetingResponse) {
+  }
+}
+
+message GreetingRequest {
+  string message = 1;
+}
+
+message GreetingResponse {
+  string message = 2;
+}
